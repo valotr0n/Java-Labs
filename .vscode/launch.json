@@ -3,6 +3,14 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Malecule3dView",
+      "request": "launch",
+      "mainClass": "First.View3d.Malecule3dView",
+      "projectName": "hellojavaFX_43e253ce",
+      "vmArgs": "--module-path \"C:\\JavaFX\\javafx-sdk-25.0.2\\lib\" --add-modules javafx.controls,javafx.fxml,javafx.media"
+    },
+    {
+      "type": "java",
       "name": "ProgrammingLanguageTable",
       "request": "launch",
       "mainClass": "First.LanguageTable.ProgrammingLanguageTable",

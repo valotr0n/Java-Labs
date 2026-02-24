@@ -15,8 +15,6 @@ import javax.imageio.ImageIO;
 import java.io.File;
 
 public class ImagePallet extends Application {
-    public static final double WIDTH = 900;
-    public static final double HEIGHT = 600;
     private ToggleGroup toggleGroup;
     private Pane canvas;
 
@@ -41,7 +39,7 @@ public class ImagePallet extends Application {
         root.setBottom(hbox);
 
         canvas = new Pane();
-        canvas.setPrefSize(WIDTH, HEIGHT);
+        canvas.setPrefSize(800, 600);
         canvas.setStyle("-fx-background-color: white; -fx-border-color: black");
         root.setCenter(canvas);
 
@@ -85,7 +83,7 @@ public class ImagePallet extends Application {
         });
 
 
-        Scene view = new Scene(root, WIDTH, HEIGHT);
+        Scene view = new Scene(root, 800, 600);
         window.setTitle("First Task");
         window.setScene(view);
         window.show();
