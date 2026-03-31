@@ -13,6 +13,7 @@
         "c:\\JavaFX\\javafx-sdk-25.0.2\\lib\\javafx-swt.jar",
         "c:\\JavaFX\\javafx-sdk-25.0.2\\lib\\jdk.jsobject.jar",
         "c:\\JavaFX\\javafx-sdk-25.0.2\\lib\\jfx.incubator.input.jar",
-        "c:\\JavaFX\\javafx-sdk-25.0.2\\lib\\jfx.incubator.richtext.jar"
+        "c:\\JavaFX\\javafx-sdk-25.0.2\\lib\\jfx.incubator.richtext.jar",
+        "C:\\TomEE\\lib\\servlet-api.jar"
     ]
 }
