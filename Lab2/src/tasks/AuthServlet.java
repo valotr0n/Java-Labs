@@ -62,6 +62,11 @@ public class AuthServlet extends HttpServlet{
         }
     }
 
+    @Override
+    public void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException{
+        doGet(req, resp);
+    }
+
     public String hashPassword(String password) throws Exception {
         MessageDigest messageDigest = MessageDigest.getInstance("SHA-256");
         byte[] hash = messageDigest.digest(password.getBytes("UTF-8"));
