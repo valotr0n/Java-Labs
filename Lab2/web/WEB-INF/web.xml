@@ -22,4 +22,13 @@
     <url-pattern>/Session</url-pattern>
 </servlet-mapping>
 
+<servlet>
+    <servlet-name>currency</servlet-name>
+    <servlet-class>tasks.CurrencyServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>currency</servlet-name>
+    <url-pattern>/Currency</url-pattern>
+</servlet-mapping>
+
 </web-app>  

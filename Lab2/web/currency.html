@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Котировки ЦБ</title>
+</head>
+<body>
+    <h2>Котировки валют ЦБ России</h2>
+    <form method="get" action="/Lab2/Currency">
+        
+        <label>Валюта:</label>
+        <select name="currency">
+            <option value="R01235">Доллар США</option>
+            <option value="R01239">Евро</option>
+            <option value="R01375">Юань</option>
+        </select><br><br>
+
+        <label>Дата от:</label>
+        <input type="date" name="from"><br><br>
+
+        <label>Дата до:</label>
+        <input type="date" name="to"><br><br>
+
+        <input type="submit" value="Показать котировки">
+    </form>
+</body>
+</html>
