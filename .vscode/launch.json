@@ -64,6 +64,14 @@
       "mainClass": "First.VideoPlayerApp",
       "projectName": "hellojavaFX_43e253ce",
       "vmArgs": "--module-path \"C:\\JavaFX\\javafx-sdk-25.0.2\\lib\" --add-modules javafx.controls,javafx.fxml,javafx.media"
+    },
+    {
+    "type": "java",
+    "name": "AuthClient",
+    "request": "launch",
+    "mainClass": "AuthClient",
+    "classPaths": ["${workspaceFolder}/Lab2/javafx-client/src"],
+    "vmArgs": "--module-path \"C:\\JavaFX\\javafx-sdk-25.0.2\\lib\" --add-modules javafx.controls,javafx.fxml"
     }
   ]
 }
