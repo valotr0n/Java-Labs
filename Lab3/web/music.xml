@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library>
+    <song>
+        <title>Bohemian Rhapsody</title>
+        <artist>Queen</artist>
+        <genre>Rock</genre>
+        <year>1975</year>
+    </song>
+    <song>
+        <title>Blinding Lights</title>
+        <artist>The Weeknd</artist>
+        <genre>Pop</genre>
+        <year>2019</year>
+    </song>
+    <song>
+        <title>Smells Like Teen Spirit</title>
+        <artist>Nirvana</artist>
+        <genre>Rock</genre>
+        <year>1991</year>
+    </song>
+    <song>
+        <title>Lose Yourself</title>
+        <artist>Eminem</artist>
+        <genre>Hip-Hop</genre>
+        <year>2002</year>
+    </song>
+</library>
