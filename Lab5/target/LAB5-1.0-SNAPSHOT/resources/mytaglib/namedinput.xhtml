@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:cc="http://xmlns.jcp.org/jsf/composite">
+
+<cc:interface>
+    <cc:attribute name="label"/>
+    <cc:attribute name="property"/>
+</cc:interface>
+
+<cc:implementation>
+    <h:panelGrid columns="3">
+        <h:outputText value="#{cc.attrs.label}"/>
+        <h:inputText id="input"
+                     value="#{cc.attrs.property}"
+                     required="true"
+                     label="#{cc.attrs.label}"/>
+        <h:message for="input" style="color: red"/>
+    </h:panelGrid>
+</cc:implementation>
+
+</html>

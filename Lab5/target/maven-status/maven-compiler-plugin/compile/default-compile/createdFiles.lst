@@ -1,0 +1,9 @@
+com\carrental\model\Rental.class
+com\carrental\bean\ClientBean.class
+com\carrental\bean\RegBean.class
+com\carrental\bean\AuthBean.class
+com\carrental\service\DataService.class
+com\carrental\bean\ManagerBean.class
+com\carrental\model\RegUser.class
+com\carrental\model\User.class
+com\carrental\model\Car.class

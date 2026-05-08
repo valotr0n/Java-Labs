@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<ui:composition template="/templates/layout.xhtml">
+
+    <ui:define name="content">
+        <div class="page-container">
+            <h2>Добро пожаловать, #{authBean.currentUser.name}!</h2>
+
+            <!-- Мои аренды -->
+            <h2>Мои аренды</h2>
+            <h:form>
+                <h:dataTable value="#{clientBean.myRentals}" var="rental"
+                             styleClass="table" headerClass="table-header"
+                             rendered="#{not empty clientBean.myRentals}">
+                    <h:column>
+                        <f:facet name="header">Автомобиль</f:facet>
+                        #{rental.car.name}
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Цвет</f:facet>
+                        #{rental.car.color}
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Дней</f:facet>
+                        #{rental.days}
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Сумма</f:facet>
+                        #{rental.totalPrice} руб.
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Действие</f:facet>
+                        <h:commandButton value="Вернуть"
+                                         action="#{clientBean.returnCar(rental.id)}"
+                                         styleClass="btn-danger"
+                                         onclick="return confirm('Вернуть автомобиль?')"/>
+                    </h:column>
+                </h:dataTable>
+
+                <h:outputText value="У вас нет активных аренд"
+                              rendered="#{empty clientBean.myRentals}"/>
+            </h:form>
+
+            <!-- Доступные машины -->
+            <h2>Доступные автомобили</h2>
+            <h:form>
+                <h:dataTable value="#{clientBean.availableCars}" var="car"
+                             styleClass="table" headerClass="table-header"
+                             rendered="#{not empty clientBean.availableCars}">
+                    <h:column>
+                        <f:facet name="header">Название</f:facet>
+                        #{car.name}
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Цвет</f:facet>
+                        #{car.color}
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Состояние</f:facet>
+                        #{car.condition}
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Цена/день</f:facet>
+                        #{car.pricePerDay} руб.
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Действие</f:facet>
+                        <h:commandButton value="Арендовать"
+                                         action="#{clientBean.selectCar(car)}"
+                                         styleClass="btn"/>
+                    </h:column>
+                </h:dataTable>
+
+                <h:outputText value="Нет доступных автомобилей"
+                              rendered="#{empty clientBean.availableCars}"/>
+            </h:form>
+
+            <!-- Кнопка выйти -->
+            <h:form>
+                <h:commandButton value="Выйти"
+                                 action="#{authBean.logout()}"
+                                 styleClass="btn-cancel"/>
+            </h:form>
+        </div>
+    </ui:define>
+
+</ui:composition>
+</html>

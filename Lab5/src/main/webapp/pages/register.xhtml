@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:my="http://xmlns.jcp.org/jsf/composite/mytaglib">
+
+<ui:composition template="/templates/layout.xhtml">
+
+    <ui:define name="content">
+        <div class="form-container">
+            <h2>Регистрация</h2>
+
+            <h:form>
+                <my:namedinput label="Имя"
+                               property="#{regBean.newUser.name}"/>
+                <my:namedinput label="Email"
+                               property="#{regBean.newUser.email}"/>
+                <my:namedinput label="Телефон"
+                               property="#{regBean.newUser.phone}"/>
+                <my:namedinput label="Пароль"
+                               property="#{regBean.newUser.password}"/>
+                <my:namedinput label="Подтвердите пароль"
+                               property="#{regBean.confirmPassword}"/>
+
+                <h:outputText value="#{regBean.errorMessage}"
+                              style="color: red"
+                              rendered="#{not empty regBean.errorMessage}"/>
+
+                <h:commandButton value="Зарегистрироваться"
+                                 action="#{regBean.register()}"
+                                 styleClass="btn"/>
+            </h:form>
+
+            <p>Уже есть аккаунт?
+                <h:outputLink value="#{request.contextPath}/pages/login.xhtml">
+                    Войти
+                </h:outputLink>
+            </p>
+        </div>
+    </ui:define>
+
+</ui:composition>
+</html>

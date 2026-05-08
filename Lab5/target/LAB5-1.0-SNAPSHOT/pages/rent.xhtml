@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+<ui:composition template="/templates/layout.xhtml">
+
+    <ui:define name="content">
+        <div class="form-container">
+            <h2>Оформление аренды</h2>
+
+            <!-- Информация о машине -->
+            <h:panelGrid columns="2" styleClass="table">
+                <h:outputText value="Название"/>
+                <h:outputText value="#{clientBean.selectedCar.name}"/>
+
+                <h:outputText value="Цвет"/>
+                <h:outputText value="#{clientBean.selectedCar.color}"/>
+
+                <h:outputText value="Серийный номер"/>
+                <h:outputText value="#{clientBean.selectedCar.serialNumber}"/>
+
+                <h:outputText value="Состояние"/>
+                <h:outputText value="#{clientBean.selectedCar.condition}"/>
+
+                <h:outputText value="Цена за день"/>
+                <h:outputText value="#{clientBean.selectedCar.pricePerDay} руб."/>
+            </h:panelGrid>
+
+            <!-- Форма аренды -->
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="Количество дней"/>
+                    <h:inputText value="#{clientBean.rentDays}"
+                                 required="true"
+                                 label="Количество дней"/>
+                </h:panelGrid>
+
+                <h:outputText value="#{clientBean.errorMessage}"
+                              style="color: red"
+                              rendered="#{not empty clientBean.errorMessage}"/>
+
+                <br/>
+                <h:outputText value="Итого: #{clientBean.totalPrice} руб."
+                              styleClass="total-price"/>
+                <br/><br/>
+
+                <h:commandButton value="Арендовать"
+                                 action="#{clientBean.rentCar()}"
+                                 styleClass="btn"/>
+
+                <h:commandButton value="Назад"
+                                 action="/pages/client?faces-redirect=true"
+                                 styleClass="btn-cancel"
+                                 immediate="true"/>
+            </h:form>
+        </div>
+    </ui:define>
+
+</ui:composition>
+</html>
