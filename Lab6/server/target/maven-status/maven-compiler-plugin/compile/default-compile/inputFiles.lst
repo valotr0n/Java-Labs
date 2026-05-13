@@ -1,0 +1,14 @@
+C:\Users\Валерий\Desktop\Java-Labs\Lab6\server\src\main\java\lab6\client\CompetitionApiClient.java
+C:\Users\Валерий\Desktop\Java-Labs\Lab6\server\src\main\java\lab6\model\Competition.java
+C:\Users\Валерий\Desktop\Java-Labs\Lab6\server\src\main\java\lab6\model\Participant.java
+C:\Users\Валерий\Desktop\Java-Labs\Lab6\server\src\main\java\lab6\model\Stage.java
+C:\Users\Валерий\Desktop\Java-Labs\Lab6\server\src\main\java\lab6\model\User.java
+C:\Users\Валерий\Desktop\Java-Labs\Lab6\server\src\main\java\lab6\rest\CompetitionResource.java
+C:\Users\Валерий\Desktop\Java-Labs\Lab6\server\src\main\java\lab6\rest\RestApplication.java
+C:\Users\Валерий\Desktop\Java-Labs\Lab6\server\src\main\java\lab6\rest\UserResource.java
+C:\Users\Валерий\Desktop\Java-Labs\Lab6\server\src\main\java\lab6\store\CompetitionStore.java
+C:\Users\Валерий\Desktop\Java-Labs\Lab6\server\src\main\java\lab6\store\UserStore.java
+C:\Users\Валерий\Desktop\Java-Labs\Lab6\server\src\main\java\lab6\web\AdminServlet.java
+C:\Users\Валерий\Desktop\Java-Labs\Lab6\server\src\main\java\lab6\web\AppServlet.java
+C:\Users\Валерий\Desktop\Java-Labs\Lab6\server\src\main\java\lab6\web\Html.java
+C:\Users\Валерий\Desktop\Java-Labs\Lab6\server\src\main\java\lab6\web\ParticipantServlet.java

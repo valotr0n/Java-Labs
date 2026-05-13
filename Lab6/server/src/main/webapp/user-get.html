@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Получение пользователей</title>
+    <link rel="stylesheet" href="resources/css/styles.css">
+</head>
+<body>
+<main class="container">
+    <nav class="top-nav"><a href="./">Главная</a><a href="users-post.html">POST-форма</a></nav>
+    <h1>Получение пользователей</h1>
+    <section>
+        <form method="GET" action="api/users/search">
+            <label>E-mail<input type="email" name="email" value="ivan@example.com" required></label>
+            <button type="submit">Найти GET</button>
+        </form>
+        <div class="actions">
+            <a class="button" href="api/users">Получить список всех пользователей</a>
+        </div>
+    </section>
+</main>
+</body>
+</html>

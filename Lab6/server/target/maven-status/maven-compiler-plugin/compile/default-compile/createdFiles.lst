@@ -1,0 +1,14 @@
+lab6\model\User.class
+lab6\model\Stage.class
+lab6\rest\CompetitionResource.class
+lab6\store\CompetitionStore.class
+lab6\web\AdminServlet.class
+lab6\web\Html.class
+lab6\client\CompetitionApiClient.class
+lab6\model\Competition.class
+lab6\web\AppServlet.class
+lab6\rest\RestApplication.class
+lab6\model\Participant.class
+lab6\rest\UserResource.class
+lab6\store\UserStore.class
+lab6\web\ParticipantServlet.class
